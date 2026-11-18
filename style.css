@@ -183,15 +183,11 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
   letter-spacing: 0.06em;
   color: var(--color-heading);
 }
+/* 見出しは内容の左上に置き、映像・写真はコンテナの幅いっぱいに使う */
 @media (min-width: 900px) {
-  .section__grid {
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--s-24);
-    row-gap: var(--s-48);
-  }
-  .section__title { grid-column: 1 / 4; margin-top: -0.2em; }
-  .section__body { grid-column: 4 / 11; }
-  .section__body--wide { grid-column: 4 / 13; }
+  .section__grid { row-gap: var(--s-48); }
+  .section__title + .section__body,
+  .section__title + .section__body--wide { margin-top: calc(var(--s-16) * -1); }
 }
 
 .prose > p + p { margin-top: 1.4em; }
