@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Heart Re Tree｜心拍で育つ木</title>
-<meta name="description" content="心拍センサーで計測した鼓動に合わせて、粒子でできた木が発光しながら成長するインタラクティブアート。">
-<meta property="og:title" content="Heart Re Tree｜心拍で育つ木">
-<meta property="og:description" content="心拍センサーで計測した鼓動に合わせて、粒子でできた木が発光しながら成長するインタラクティブアート。">
+<title>Heart Re Tree｜タニザワユメカ</title>
+<meta name="description" content="心拍センサーで計測した鼓動に合わせて、光の粒子でできたケヤキが発光しながら成長するインタラクティブアート。">
+<meta property="og:title" content="Heart Re Tree｜タニザワユメカ">
+<meta property="og:description" content="心拍センサーで計測した鼓動に合わせて、光の粒子でできたケヤキが発光しながら成長するインタラクティブアート。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/installation.jpg">
+<meta property="og:image" content="https://topazmaple.github.io/heart-re-tree/assets/img/installation.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="player.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -23,10 +24,9 @@
     <nav aria-label="ページ内の目次">
       <ul class="nav-list">
         <li><a href="#movie">映像</a></li>
-        <li><a href="#about">作品について</a></li>
-        <li><a href="#system">仕組み</a></li>
-        <li><a href="#process">制作</a></li>
-        <li><a href="#credit">クレジット</a></li>
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#experience">体験</a></li>
+        <li><a href="#technology">技術</a></li>
       </ul>
     </nav>
   </div>
@@ -38,137 +38,113 @@
     <div class="container hero__text">
       <p class="hero__kicker">Interactive Art / 2026</p>
       <h1 id="hero-title" class="hero__title">Heart Re Tree</h1>
-      <p class="hero__lead">あなたの鼓動で、木が育つ。</p>
+    </div>
+  </section>
+
+  <section class="info" aria-label="作品情報">
+    <div class="container">
+      <dl class="info__list">
+        <div><dt>制作年</dt><dd>2026年</dd></div>
+        <div><dt>作品カテゴリー</dt><dd>インタラクティブアート</dd></div>
+        <div><dt>制作期間</dt><dd>2026年6月16日〜7月27日</dd></div>
+        <div><dt>展示期間</dt><dd>2026年6月27日・28日</dd></div>
+        <div><dt>展示場所</dt><dd>長岡造形大学 スタジオB</dd></div>
+        <div><dt>使用ツール</dt><dd>TouchDesigner、Autodesk Fusion、Arduino IDE</dd></div>
+        <div class="info__team"><dt>制作チーム</dt><dd><img class="info__logo" src="assets/img/logo-tanizawayumeka.png" alt="タニザワユメカ" width="1897" height="255"><span>長岡造形大学 デザイン学科<br>谷楓・清水ゆめ・野澤実来・高井遥加</span></dd></div>
+      </dl>
     </div>
   </section>
 
   <section class="section" id="movie" aria-labelledby="movie-title">
     <div class="container">
       <h2 id="movie-title" class="section__title">作品映像</h2>
-      <figure class="movie">
-        <video class="movie__video" controls playsinline preload="metadata" poster="assets/img/poster.jpg" width="1920" height="1080">
+      <figure class="player" data-player data-audio>
+        <video class="player__video" controls muted playsinline loop preload="metadata" poster="assets/img/poster.jpg" width="1920" height="1080" aria-label="作品紹介映像">
           <source src="assets/video/heart-re-tree.mp4" type="video/mp4">
           お使いのブラウザでは動画を再生できません。<a href="assets/video/heart-re-tree.mp4">動画ファイルを開く</a>
         </video>
-        <figcaption>作品紹介映像(1分26秒・音声あり)。体験の流れ、構造、展示の様子を収録。</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="section" id="about" aria-labelledby="about-title">
-    <div class="container grid-2">
-      <div>
-        <h2 id="about-title" class="section__title">作品について</h2>
-        <p>心拍という、普段は意識しないものを可視化するインタラクティブアート。</p>
-        <p>切り株の形をした台に指を置くと、内部の心拍センサーが脈拍を計測する。計測した心拍数に応じて、スクリーンの木が発光しながら成長し、鼓動のリズムで明滅する。木の姿は体験する人ごとに変わり、人それぞれ違う心拍のリズムを、目に見える「成長」として体験できる。</p>
-        <p>木は一本の立体モデルではなく、無数の光の粒子の集まりとして描いた。鼓動を血液の循環、血液を粒子、そして細胞の集まりと捉え、生命が絶えず巡りながら育っていく様子を表している。モチーフには、展示を行った新潟県長岡市の木であるケヤキを選んだ。</p>
-        <p lang="en" class="english">Heart Re Tree is an interactive installation that turns an invisible rhythm—your heartbeat—into the growth of a tree. Place a finger on the tree-stump sensor, and a tree made of countless particles of light grows and pulses in time with your heart.</p>
-      </div>
-      <dl class="spec">
-        <div><dt>タイトル</dt><dd>Heart Re Tree</dd></div>
-        <div><dt>制作年</dt><dd>2026年</dd></div>
-        <div><dt>分類</dt><dd>インタラクティブアート/映像インスタレーション</dd></div>
-        <div><dt>制作期間</dt><dd>2026年6月16日〜7月27日</dd></div>
-        <div><dt>展示</dt><dd>2026年6月27日・28日<br>長岡造形大学 スタジオB</dd></div>
-        <div><dt>サイズ</dt><dd>センサー台 30×50×85cm<br>プロジェクター投影(壁面)</dd></div>
-        <div><dt>素材・技術</dt><dd>TouchDesigner、Arduino、心拍センサー(MAX30105)、PLAフィラメント(3Dプリント)、プロジェクター</dd></div>
-      </dl>
+  <section class="section" id="concept" aria-labelledby="concept-title">
+    <div class="container prose">
+      <h2 id="concept-title" class="section__title">コンセプト</h2>
+      <p>心拍という、普段は意識しないものを可視化するインタラクティブアートです。</p>
+      <p>切り株の形をした台に指を置くと、内部の心拍センサーが脈拍を計測します。計測した心拍数に応じて、スクリーンの木が発光しながら成長し、鼓動のリズムで明滅していきます。木の姿は体験する人ごとに変わり、人それぞれ違う心拍のリズムを、目に見える「成長」として体験できるようになっています。</p>
+      <p>木は一本の立体モデルではなく、無数の光の粒子の集まりとして描きました。鼓動を血液の循環、血液を粒子、そして細胞の集まりと捉え、生命が絶えず巡りながら育っていく様子を表しています。モチーフには、展示を行った新潟県長岡市の木であるケヤキを選びました。人の心拍をテーマにしているため、人間の寿命に近い時間を生きる木であることも理由のひとつです。</p>
+      <p>木が育ちきったときの大きさは、誰が体験しても同じです。違いが現れるのは、育つ速さと光り方。大きさをそろえることで、自分と他の人の鼓動の違いを見比べられるようにしました。</p>
+      <p>会場には、木々のざわめきと鳥の声の環境音を流しました。自分と木が同じ森の中にいるという実在感を支えるためです。一定のリズムで刻まれる心拍に、鳥の声の不規則なアクセントが重なることで、木が確かに育っていく様子が際立ちます。</p>
+      <p>普段は意識しない心拍や呼吸を、目の前の木として見つめる。そのとき、自分が生きていることを、少しだけ確かに感じられるはずです。</p>
     </div>
   </section>
 
   <section class="section" id="experience" aria-labelledby="experience-title">
     <div class="container">
-      <h2 id="experience-title" class="section__title">体験の流れ</h2>
+      <h2 id="experience-title" class="section__title">体験</h2>
       <ol class="steps">
         <li class="step">
-          <img src="assets/img/touch.jpg" alt="切り株型の台の上面にある溝に、人差し指を置いている手元。" width="1374" height="1239" loading="lazy">
+          <img src="assets/img/touch.jpg" alt="切り株型の台の上面にある窪みに、人差し指を置いている手元。" width="1374" height="1239" loading="lazy">
           <h3 class="step__title"><span class="step__num">1</span>切り株に指を置く</h3>
-          <p>切り株の上面にある溝に指を置くと、内部のセンサーが脈拍の計測を始める。</p>
+          <p>切り株の上面にある窪みに、指を置きます。</p>
         </li>
         <li class="step">
-          <img src="assets/img/stump-sensor.jpg" alt="切り株型の台の溝の奥で、心拍センサーの赤い光がともっている。" width="1600" height="1201" loading="lazy">
+          <img src="assets/img/stump-sensor.jpg" alt="切り株型の台の窪みの奥に、心拍センサーの赤い光が見える。" width="1600" height="1201" loading="lazy">
           <h3 class="step__title"><span class="step__num">2</span>5秒間、心拍を測る</h3>
-          <p>5秒間の平均心拍数を計測する。センサーの赤い光が、計測中であることを示す。</p>
+          <p>指を置いたまま5秒間待つと、窪みの奥のセンサーが平均心拍数を計測します。</p>
         </li>
         <li class="step">
           <img src="assets/img/installation-wide.jpg" alt="投影された光る木が大きく枝葉を広げている。手前の台に切り株が置かれている。" width="1477" height="1108" loading="lazy">
           <h3 class="step__title"><span class="step__num">3</span>木が育ち、明滅する</h3>
-          <p>心拍数に応じた速さで木が成長し、鼓動に合わせて明滅する。計測が終わると発光が止まり、次の人の鼓動を待つ。</p>
+          <p>心拍数に応じた速さで木が成長し、鼓動に合わせて明滅します。計測が終わると発光が止まり、次の人の鼓動を待ちます。</p>
         </li>
       </ol>
-      <figure class="movie movie--sub">
-        <video class="movie__video" controls muted playsinline preload="metadata" width="1280" height="720">
+      <figure class="player player--sub" data-player>
+        <video class="player__video" controls muted playsinline loop preload="metadata" width="1280" height="720" aria-label="体験中の記録映像">
           <source src="assets/video/experience.mp4" type="video/mp4">
           お使いのブラウザでは動画を再生できません。<a href="assets/video/experience.mp4">動画ファイルを開く</a>
         </video>
-        <figcaption>体験中の記録映像(35秒・音声なし)。</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" id="system" aria-labelledby="system-title">
-    <div class="container grid-2">
-      <div>
-        <h2 id="system-title" class="section__title">仕組み</h2>
-        <p>切り株の内部に組み込んだ心拍センサー(MAX30105)の値をArduinoで処理し、シリアル通信でTouchDesignerへ送る。TouchDesignerでは、植物の成長パターンをアルゴリズムで生成するL-systemを使って木を描き、心拍数に応じて枝の伸び方と発光をリアルタイムに変化させている。</p>
-        <p>当初は成長の速さだけで心拍の違いを表していたが、それだけでは差が伝わりにくかった。そこで、鼓動に合わせて木が明滅する演出を加え、心拍の違いが直感的にわかるようにした。</p>
-        <p>空間はプロジェクター1台と展示台1台だけのシンプルな構成にし、体験者が木と自分の鼓動に集中できるようにした。展示では、チームで制作した環境音もあわせて流した。</p>
-      </div>
-      <figure class="diagram" aria-labelledby="diagram-caption">
-        <ol class="flow">
-          <li><span class="flow__label">入力</span>指先の脈拍<small>心拍センサー MAX30105</small></li>
-          <li><span class="flow__label">処理</span>5秒間の平均心拍数<small>Arduino → シリアル通信</small></li>
-          <li><span class="flow__label">生成</span>木の成長・明滅<small>TouchDesigner(L-system・パーティクル)</small></li>
-          <li><span class="flow__label">出力</span>壁面への投影<small>プロジェクター</small></li>
-        </ol>
-        <figcaption id="diagram-caption">システム構成</figcaption>
       </figure>
     </div>
   </section>
 
   <section class="section" id="object" aria-labelledby="object-title">
     <div class="container">
-      <h2 id="object-title" class="section__title">センサー台</h2>
-      <p class="section__lead">センサーを隠しながら作品の世界になじむよう、台を切り株の形にした。3Dプリントした本体に塗装を重ね、本物の切り株らしい質感と形に近づけた。</p>
+      <h2 id="object-title" class="section__title">切り株のセンサー台</h2>
+      <div class="prose">
+        <p>台は、木の切り株の形にしました。本来なら年輪が見える上面をモチーフにし、そこに指の形の窪みを設けています。説明がなくても「ここに指を置く」とわかるように、形そのもので体験者の行動を導いています。</p>
+      </div>
       <ul class="gallery">
-        <li><figure><img src="assets/img/stump-detail.jpg" alt="切り株の上面のアップ。年輪のような塗装と、指を置くための溝。" width="1600" height="1200" loading="lazy"><figcaption>上面の溝に指を置く</figcaption></figure></li>
-        <li><figure><img src="assets/img/stump.jpg" alt="白い台に置かれた、根元が波打つ形の茶色い切り株。" width="1600" height="1201" loading="lazy"><figcaption>根元まで切り株らしい形に調整</figcaption></figure></li>
-        <li><figure><img src="assets/img/sensor-housing.jpg" alt="白い3Dプリントのパーツの上面に、緑色の心拍センサー基板がはめ込まれている。" width="1206" height="895" loading="lazy"><figcaption>塗装前の本体とセンサー基板</figcaption></figure></li>
+        <li><img src="assets/img/stump-detail.jpg" alt="切り株の上面のアップ。年輪のような塗装と、指を置くための窪み。" width="1600" height="1200" loading="lazy"></li>
+        <li><img src="assets/img/stump.jpg" alt="白い台に置かれた、根元が波打つ形の茶色い切り株。" width="1600" height="1201" loading="lazy"></li>
+        <li><img src="assets/img/stump-top.jpg" alt="正面から見た切り株。上面の窪みの奥にセンサーの赤い光が見える。" width="1600" height="1201" loading="lazy"></li>
       </ul>
     </div>
   </section>
 
-  <section class="section" id="process" aria-labelledby="process-title">
+  <section class="section" id="technology" aria-labelledby="technology-title">
     <div class="container grid-2">
-      <div>
-        <h2 id="process-title" class="section__title">制作の過程</h2>
-        <p>はじめはBlenderで木の3Dモデルを作っていたが、リアルタイムに変化させるには処理の重さと制御のしにくさが課題になった。そこでTouchDesignerのL-systemに切り替え、粒子の集まりとして木を描く今の表現にたどり着いた。木の大きさが伝わるように草原と背景のケヤキも加えた。</p>
-        <p>中間発表では「いつ指を離せばいいのかわからない」という声があった。木が育つ前後に入れていた映像の演出は待たされている印象を与えるため取りやめ、計測が終わったら発光を止める仕様に変えて、体験の区切りがわかるようにした。体験者が近づくと台が光る仕掛けも、画面へ向かう視線の妨げになると判断して外した。</p>
-        <p>最後まで、計測時間や発光時間、映像のタイミングを調整し続けた。</p>
+      <div class="prose">
+        <h2 id="technology-title" class="section__title">技術</h2>
+        <p>木の映像は、TouchDesignerでリアルタイムに生成しています。植物の成長パターンをアルゴリズムで描くL-systemを使い、枝の伸び方を光の粒子で形づくりました。</p>
+        <p>切り株の中の心拍センサーが、アナログな身体とデジタルな映像の空間をつないでいます。計測した心拍数(BPM)を0.01倍した値を木の成長速度に、鼓動のリズムを発光の明滅に割り当てました。はじめは成長速度だけで違いを表していましたが、発光も心拍に合わせることで、違いがよりはっきりと伝わるようにしています。</p>
       </div>
-      <figure class="figure">
-        <img src="assets/img/installation-front.jpg" alt="正面から見た展示。光る木の投影の手前に、作品説明パネル付きの白い台と切り株が置かれている。" width="1108" height="1477" loading="lazy">
-        <figcaption>長岡造形大学 スタジオBでの展示風景</figcaption>
+      <figure class="diagram" aria-labelledby="diagram-caption">
+        <ol class="flow">
+          <li><span class="flow__label">身体</span>指先の脈拍<small>切り株の中の心拍センサー</small></li>
+          <li><span class="flow__label">計測</span>5秒間の平均心拍数<small>Arduino → シリアル通信</small></li>
+          <li><span class="flow__label">生成</span>木の成長と明滅<small>TouchDesigner・L-system</small></li>
+          <li><span class="flow__label">空間</span>壁面への投影<small>プロジェクター</small></li>
+        </ol>
+        <figcaption id="diagram-caption">身体から映像までの流れ</figcaption>
       </figure>
-    </div>
-  </section>
-
-  <section class="section" id="credit" aria-labelledby="credit-title">
-    <div class="container">
-      <h2 id="credit-title" class="section__title">クレジット</h2>
-      <p class="section__lead">制作:タニザワユメカ(長岡造形大学の学生4名によるチーム)</p>
-      <dl class="credit">
-        <div><dt>谷 楓</dt><dd>演出・ビジュアル制作(TouchDesigner)、センサー台制作補助</dd></div>
-        <div><dt>清水 ゆめ</dt><dd>心拍センサーの動作・配置構成、センサー台モックアップ制作、背景映像制作</dd></div>
-        <div><dt>高井 遥加</dt><dd>切り株(センサー台)制作</dd></div>
-        <div><dt>野澤 実来</dt><dd>心拍数に応じた木の発光ビジュアル制作</dd></div>
-      </dl>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container site-footer__inner">
+    <img class="site-footer__logo" src="assets/img/logo-tanizawayumeka.png" alt="タニザワユメカ" width="1897" height="255">
     <p>© 2026 タニザワユメカ</p>
   </div>
 </footer>
