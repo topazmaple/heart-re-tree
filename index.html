@@ -23,10 +23,11 @@
     <a class="site-header__title" href="#top">Heart Re Tree</a>
     <nav aria-label="ページ内の目次">
       <ul class="nav-list">
-        <li><a href="#movie">映像</a></li>
-        <li><a href="#concept">コンセプト</a></li>
-        <li><a href="#experience">体験</a></li>
-        <li><a href="#technology">技術</a></li>
+        <li><a href="#movie">Movie</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#object">Detail</a></li>
+        <li><a href="#technology">Technology</a></li>
       </ul>
     </nav>
   </div>
@@ -38,26 +39,13 @@
     <div class="container hero__text">
       <p class="hero__kicker">Interactive Art / 2026</p>
       <h1 id="hero-title" class="hero__title">Heart Re Tree</h1>
-    </div>
-  </section>
-
-  <section class="info" aria-label="作品情報">
-    <div class="container">
-      <dl class="info__list">
-        <div><dt>制作年</dt><dd>2026年</dd></div>
-        <div><dt>作品カテゴリー</dt><dd>インタラクティブアート</dd></div>
-        <div><dt>制作期間</dt><dd>2026年6月16日〜7月27日</dd></div>
-        <div><dt>展示期間</dt><dd>2026年6月27日・28日</dd></div>
-        <div><dt>展示場所</dt><dd>長岡造形大学 スタジオB</dd></div>
-        <div><dt>使用ツール</dt><dd>TouchDesigner、Autodesk Fusion、Arduino IDE</dd></div>
-        <div class="info__team"><dt>制作チーム</dt><dd><img class="info__logo" src="assets/img/logo-tanizawayumeka.png" alt="タニザワユメカ" width="1897" height="255"><span>長岡造形大学 デザイン学科<br>谷楓・清水ゆめ・野澤実来・高井遥加</span></dd></div>
-      </dl>
+      <p class="hero__team"><img src="assets/img/logo-tanizawayumeka.png" alt="タニザワユメカ" width="1897" height="255"></p>
     </div>
   </section>
 
   <section class="section" id="movie" aria-labelledby="movie-title">
     <div class="container">
-      <h2 id="movie-title" class="section__title">作品映像</h2>
+      <h2 id="movie-title" class="section__title">Movie</h2>
       <figure class="player" data-player data-audio>
         <video class="player__video" controls muted playsinline loop preload="metadata" poster="assets/img/poster.jpg" width="1920" height="1080" aria-label="作品紹介映像">
           <source src="assets/video/heart-re-tree.mp4" type="video/mp4">
@@ -69,8 +57,9 @@
 
   <section class="section" id="concept" aria-labelledby="concept-title">
     <div class="container prose">
-      <h2 id="concept-title" class="section__title">コンセプト</h2>
-      <p>心拍という、普段は意識しないものを可視化するインタラクティブアートです。</p>
+      <h2 id="concept-title" class="section__title">Concept</h2>
+      <p class="title-origin"><span lang="en">Heart Re Tree</span>——ハートレート(心拍数)で、木をつくり直す。体験者の心拍(heart)で、木(tree)を構築し直す(re)という意味を込めたタイトルです。</p>
+      <p>心拍という、普段は意識しないものを可視化するインタラクティブアートです。心拍のリズムは、人によって少しずつ違います。心拍センサーで一人ひとりの平均心拍数を取り出し、それに合わせて木の育ち方が変わるようにしました。</p>
       <p>切り株の形をした台に指を置くと、内部の心拍センサーが脈拍を計測します。計測した心拍数に応じて、スクリーンの木が発光しながら成長し、鼓動のリズムで明滅していきます。木の姿は体験する人ごとに変わり、人それぞれ違う心拍のリズムを、目に見える「成長」として体験できるようになっています。</p>
       <p>木は一本の立体モデルではなく、無数の光の粒子の集まりとして描きました。鼓動を血液の循環、血液を粒子、そして細胞の集まりと捉え、生命が絶えず巡りながら育っていく様子を表しています。モチーフには、展示を行った新潟県長岡市の木であるケヤキを選びました。人の心拍をテーマにしているため、人間の寿命に近い時間を生きる木であることも理由のひとつです。</p>
       <p>木が育ちきったときの大きさは、誰が体験しても同じです。違いが現れるのは、育つ速さと光り方。大きさをそろえることで、自分と他の人の鼓動の違いを見比べられるようにしました。</p>
@@ -81,7 +70,7 @@
 
   <section class="section" id="experience" aria-labelledby="experience-title">
     <div class="container">
-      <h2 id="experience-title" class="section__title">体験</h2>
+      <h2 id="experience-title" class="section__title">Experience</h2>
       <ol class="steps">
         <li class="step">
           <img src="assets/img/touch.jpg" alt="切り株型の台の上面にある窪みに、人差し指を置いている手元。" width="1374" height="1239" loading="lazy">
@@ -110,7 +99,7 @@
 
   <section class="section" id="object" aria-labelledby="object-title">
     <div class="container">
-      <h2 id="object-title" class="section__title">切り株のセンサー台</h2>
+      <h2 id="object-title" class="section__title">Detail</h2>
       <div class="prose">
         <p>台は、木の切り株の形にしました。本来なら年輪が見える上面をモチーフにし、そこに指の形の窪みを設けています。説明がなくても「ここに指を置く」とわかるように、形そのもので体験者の行動を導いています。</p>
       </div>
@@ -123,9 +112,9 @@
   </section>
 
   <section class="section" id="technology" aria-labelledby="technology-title">
-    <div class="container grid-2">
+    <div class="container">
+      <h2 id="technology-title" class="section__title">Technology</h2>
       <div class="prose">
-        <h2 id="technology-title" class="section__title">技術</h2>
         <p>木の映像は、TouchDesignerでリアルタイムに生成しています。植物の成長パターンをアルゴリズムで描くL-systemを使い、枝の伸び方を光の粒子で形づくりました。</p>
         <p>切り株の中の心拍センサーが、アナログな身体とデジタルな映像の空間をつないでいます。計測した心拍数(BPM)を0.01倍した値を木の成長速度に、鼓動のリズムを発光の明滅に割り当てました。はじめは成長速度だけで違いを表していましたが、発光も心拍に合わせることで、違いがよりはっきりと伝わるようにしています。</p>
       </div>
@@ -138,6 +127,20 @@
         </ol>
         <figcaption id="diagram-caption">身体から映像までの流れ</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="section info" id="information" aria-labelledby="info-title">
+    <div class="container">
+      <h2 id="info-title" class="section__title">Information</h2>
+      <dl class="info__list">
+        <div><dt>制作年</dt><dd>2026年</dd></div>
+        <div><dt>作品カテゴリー</dt><dd>インタラクティブアート</dd></div>
+        <div><dt>制作期間</dt><dd>2026年6月16日〜7月27日</dd></div>
+        <div><dt>展示期間</dt><dd>2026年6月27日・28日</dd></div>
+        <div><dt>展示場所</dt><dd>長岡造形大学 スタジオB</dd></div>
+        <div><dt>使用ツール</dt><dd>TouchDesigner、Autodesk Fusion、Arduino IDE</dd></div>
+      </dl>
     </div>
   </section>
 </main>
