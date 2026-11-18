@@ -177,10 +177,11 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
 
 .section__grid { display: grid; gap: var(--s-32); }
 .section__title {
-  font-size: var(--fs-14);
-  line-height: 1.5;
-  letter-spacing: 0.2em;
-  color: var(--color-text-sub);
+  font-size: var(--fs-28);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--color-heading);
 }
 @media (min-width: 900px) {
   .section__grid {
@@ -188,7 +189,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
     column-gap: var(--s-24);
     row-gap: var(--s-48);
   }
-  .section__title { grid-column: 1 / 4; padding-top: 0.4em; }
+  .section__title { grid-column: 1 / 4; margin-top: -0.2em; }
   .section__body { grid-column: 4 / 11; }
   .section__body--wide { grid-column: 4 / 13; }
 }
