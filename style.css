@@ -316,6 +316,17 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
 .flow__sub { color: var(--color-text-sub); font-size: var(--fs-14); line-height: 1.7; }
 
 /* ===== Information ===== */
+.info-wrap { display: grid; gap: var(--s-32); align-items: center; }
+.info-image {
+  width: 100%;
+  max-width: 420px;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(farthest-side, #000 55%, transparent);
+  mask-image: radial-gradient(farthest-side, #000 55%, transparent);
+}
+@media (min-width: 900px) {
+  .info-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: var(--s-64); }
+}
 .info { display: grid; margin: 0; border-top: 1px solid var(--color-line); }
 .info > div {
   display: grid;
