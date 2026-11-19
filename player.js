@@ -3,6 +3,11 @@
 (function () {
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // 余白の木:動きを減らす設定なら止めておく
+  document.querySelectorAll('.bg-tree').forEach(function (v) {
+    if (reduceMotion) { v.removeAttribute('autoplay'); v.pause(); }
+  });
+
   function hasAudio(video) {
     if (typeof video.mozHasAudio === 'boolean') return video.mozHasAudio;
     if (video.webkitAudioDecodedByteCount > 0) return true;

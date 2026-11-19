@@ -172,7 +172,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
 .hero__team img { width: clamp(150px, 20vw, 220px); }
 
 /* ===== Section ===== */
-.section { padding-block: var(--s-64); }
+.section { padding-block: var(--s-64); overflow-x: hidden; overflow-x: clip; }
 @media (min-width: 768px) { .section { padding-block: 120px; } }
 
 .section__grid { display: grid; gap: var(--s-32); }
@@ -188,6 +188,29 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 0.25em; }
   .section__grid { row-gap: var(--s-48); }
   .section__title + .section__body,
   .section__title + .section__body--wide { margin-top: calc(var(--s-16) * -1); }
+}
+
+/* ===== 余白の木(背景のループ映像) =====
+   黒地の映像を screen で重ね、黒を背景になじませる。文字より後ろに置く。 */
+.section__grid { position: relative; }
+.section__grid > :not(.bg-tree) { position: relative; z-index: 1; }
+.bg-tree {
+  position: absolute;
+  z-index: 0;
+  top: -24px;
+  right: -28%;
+  width: 100%;
+  max-width: none;
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(closest-side, #000 65%, transparent);
+  mask-image: radial-gradient(closest-side, #000 65%, transparent);
+}
+@media (min-width: 900px) {
+  .bg-tree { width: 56%; right: 0; opacity: 0.9; }
+  .bg-tree--concept { top: 120px; }
+  .bg-tree--tech { top: -40px; }
 }
 
 .prose > p + p { margin-top: 1.4em; }
